@@ -164,7 +164,7 @@ Func _DoNetworkEvents()
                     ; Not authorised, user is typing password
                     If ($asBuffer[$x] == $sAdminPass) Then
                         $aiAuth[$x] = 1
-                        TCPSend($ahSocket[$x], "Administrator authorisation granted." & @CRLF & @CRLF)
+                        TCPSend($ahSocket[$x], "Administrator authorization granted." & @CRLF & @CRLF)
 						_LogLine($asIpAddresses[$x] & " logged in as Administrator.")
                     Else
                         TCPSend($ahSocket[$x], "Access denied." & @CRLF & ">")
